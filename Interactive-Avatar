@@ -2,169 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EQ-IQ Academy AI Tutor</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: none;
-      position: absolute;
-      top: 0; left: 0;
-      z-index: 1;
-    }
-  </style>
+  <title>EQ-IQ Academy Test Interactive Avatar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<script>
-!function(window){
-  const host="https://labs.heygen.com",
-        url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJLYXR5YV9Qcm9mZXNzaW9uYWxMb29rMl9w%0D%0AdWJsaWMiLCJwcmV2aWV3SW1nIjoiaHR0cHM6Ly9maWxlczIuaGV5Z2VuLmFpL2F2YXRhci92My9k%0D%0ANTJmZmExYjQ0N2Q0ZjJmOGViMTY5MTdlN2VjMjIyYV81NTg3MC9wcmV2aWV3X3RhbGtfMS53ZWJw%0D%0AIiwibmVlZFJlbW92ZUJhY2tncm91bmQiOnRydWUsImtub3dsZWRnZUJhc2VJZCI6ImY2NjY3YjMw%0D%0AMjEzODRkMTk4YjUxMzFlYmExOTU5ZDEwIiwidXNlcm5hbWUiOiIzOWFkMGUxNDk0NDM0ZGUxOTYw%0D%0ANWMwYTc3YzI2MmU2OSJ9&inIFrame=1",
-        clientWidth=document.body.clientWidth,
-        wrapDiv=document.createElement("div");
-  wrapDiv.id="heygen-streaming-embed";
-  const container=document.createElement("div");
-  container.id="heygen-streaming-container";
-  const stylesheet=document.createElement("style");
-  stylesheet.innerHTML=`
-    #heygen-streaming-embed {
-      z-index: 9999;
-      position: fixed;
-      left: 40px;
-      bottom: 40px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
-      transition: all linear 0.1s;
-      overflow: hidden;
-      opacity: 0;
-      visibility: hidden;
-    }
-    #heygen-streaming-embed.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    #heygen-streaming-embed.expand {
-      ${clientWidth<540
-        ?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);"
-        :"height: 366px; width: calc(366px * 16 / 9);"}
-      border: 0;
-      border-radius: 8px;
-    }
-    #heygen-streaming-container {
-      width: 100%;
-      height: 100%;
-    }
-    #heygen-streaming-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  `;
-  const iframe=document.createElement("iframe");
-  iframe.allowFullscreen=!1,
-  iframe.title="Streaming Embed",
-  iframe.role="dialog",
-  iframe.allow="microphone",
-  iframe.src=url;
-  let visible=!1,initial=!1;
-  window.addEventListener("message",(e=>{
-    e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&(
-      "init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):
-      "show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):
-      "hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible))
-    )
-  })),
-  container.appendChild(iframe),
-  wrapDiv.appendChild(stylesheet),
-  wrapDiv.appendChild(container),
-  document.body.appendChild(wrapDiv)
-}(globalThis);
-</script>
 <body>
-  <!-- Canva Website Embed -->
-  <iframe src="https://cliftonedu.my.canva.site/eq-iq-academy-test" allow="microphone"></iframe>
+  <!-- Optional: Add a heading or instructions -->
+  <h2>EQ-IQ Academy Test Interactive Avatar</h2>
+  <p>Interact with our virtual assistant below!</p>
 
-  <!-- HeyGen Chatbot Avatar Script -->
+  <!-- HeyGen Embed Script -->
   <script>
- !function(window){
-  const host = "https://labs.heygen.com";
-  const url = host + "/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJLYXR5YV9Qcm9mZXNzaW9uYWxMb29rMl9w%0D%0AdWJsaWMiLCJwcmV2aWV3SW1nIjoiaHR0cHM6Ly9maWxlczIuaGV5Z2VuLmFpL2F2YXRhci92My9k%0D%0ANTJmZmExYjQ0N2Q0ZjJmOGViMTY5MTdlN2VjMjIyYV81NTg3MC9wcmV2aWV3X3RhbGtfMS53ZWJw%0D%0AIiwibmVlZFJlbW92ZUJhY2tncm91bmQiOnRydWUsImtub3dsZWRnZUJhc2VJZCI6ImY2NjY3YjMw%0D%0AMjEzODRkMTk4YjUxMzFlYmExOTU5ZDEwIiwidXNlcm5hbWUiOiIzOWFkMGUxNDk0NDM0ZGUxOTYw%0D%0ANWMwYTc3YzI2MmU2OSJ9&inIFrame=1";
-  const clientWidth = document.body.clientWidth;
-  const wrapDiv = document.createElement("div");
-  wrapDiv.id = "heygen-streaming-embed";
-  const container = document.createElement("div");
-  container.id = "heygen-streaming-container";
-  const stylesheet = document.createElement("style");
-  stylesheet.innerHTML = `
-    #heygen-streaming-embed {
-      z-index: 9999;
-      position: fixed;
-      left: 40px;
-      bottom: 40px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
-      transition: all linear 0.1s;
-      overflow: hidden;
-
-      opacity: 0;
-      visibility: hidden;
-    }
-    #heygen-streaming-embed.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    #heygen-streaming-embed.expand {
-      ${clientWidth < 540
-        ? "height: 266px; width: 96%; left: 50%; transform: translateX(-50%);"
-        : "height: 366px; width: calc(366px * 16 / 9);"}
-      border: 0;
-      border-radius: 8px;
-    }
-    #heygen-streaming-container {
-      width: 100%;
-      height: 100%;
-    }
-    #heygen-streaming-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  `;
-  const iframe = document.createElement("iframe");
-  iframe.allowFullscreen = !1;
-  iframe.title = "Streaming Embed";
-  iframe.role = "dialog";
-  iframe.allow = "microphone";
-  iframe.src = url;
-  let visible = !1, initial = !1;
-  window.addEventListener("message", (e => {
-    if (e.origin === host && e.data && e.data.type && "streaming-embed" === e.data.type) {
-      if ("init" === e.data.action) {
-        initial = !0;
-        wrapDiv.classList.toggle("show", initial);
-      } else if ("show" === e.data.action) {
-        visible = !0;
-        wrapDiv.classList.toggle("expand", visible);
-      } else if ("hide" === e.data.action) {
-        visible = !1;
-        wrapDiv.classList.toggle("expand", visible);
-      }
-    }
-  }));
-  container.appendChild(iframe);
-  wrapDiv.appendChild(stylesheet);
-  wrapDiv.appendChild(container);
-  document.body.appendChild(wrapDiv);
-}(globalThis);
+    !function(window){
+      const host="https://labs.heygen.com",
+            url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJLYXR5YV9Qcm9mZXNzaW9uYWxMb29rMl9w%0D%0AdWJsaWMiLCJwcmV2aWV3SW1nIjoiaHR0cHM6Ly9maWxlczIuaGV5Z2VuLmFpL2F2YXRhci92My9k%0D%0ANTJmZmExYjQ0N2Q0ZjJmOGViMTY5MTdlN2VjMjIyYV81NTg3MC9wcmV2aWV3X3RhbGtfMS53ZWJw%0D%0AIiwibmVlZFJlbW92ZUJhY2tncm91bmQiOnRydWUsImtub3dsZWRnZUJhc2VJZCI6ImY2NjY3YjMw%0D%0AMjEzODRkMTk4YjUxMzFlYmExOTU5ZDEwIiwidXNlcm5hbWUiOiIzOWFkMGUxNDk0NDM0ZGUxOTYw%0D%0ANWMwYTc3YzI2MmU2OSJ9&inIFrame=1",
+            clientWidth=document.body.clientWidth,
+            wrapDiv=document.createElement("div");
+      wrapDiv.id="heygen-streaming-embed";
+      const container=document.createElement("div");
+      container.id="heygen-streaming-container";
+      const stylesheet=document.createElement("style");
+      stylesheet.innerHTML=`
+        #heygen-streaming-embed {
+          z-index: 9999;
+          position: fixed;
+          left: 40px;
+          bottom: 40px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+          transition: all linear 0.1s;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+        }
+        #heygen-streaming-embed.show {
+          opacity: 1;
+          visibility: visible;
+        }
+        #heygen-streaming-embed.expand {
+          ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}
+          border: 0;
+          border-radius: 8px;
+        }
+        #heygen-streaming-container {
+          width: 100%;
+          height: 100%;
+        }
+        #heygen-streaming-container iframe {
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+      `;
+      const iframe=document.createElement("iframe");
+      iframe.allowFullscreen=!1;
+      iframe.title="Streaming Embed";
+      iframe.role="dialog";
+      iframe.allow="microphone";
+      iframe.src=url;
+      let visible=!1,initial=!1;
+      window.addEventListener("message",(e=>{
+        e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&(
+          "init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):
+          "show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):
+          "hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible))
+        )
+      }));
+      container.appendChild(iframe);
+      wrapDiv.appendChild(stylesheet);
+      wrapDiv.appendChild(container);
+      document.body.appendChild(wrapDiv)
+    }(globalThis);
+  </script>
 </body>
 </html>
